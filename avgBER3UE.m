@@ -1,4 +1,10 @@
-function BER_avg = avgBER3UE(a,PL,SNR_dB)
+clc
+clear 
+close all
+fprintf('This program started at %s\n', datestr(now,'HH:MM:SS'))
+SNR_dB = -5:5:35;
+a = [0.1 0.2 0.7];
+PL = 10.^([0 6 12]./10);
 N = 3;
 thresh = 0.5;
 PrCase1 = (1-thresh).*(1-thresh).*(1-thresh);
